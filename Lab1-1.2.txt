@@ -1,0 +1,24 @@
+/*********************************************************************
+ * File                 : Lab1-1.2.txt
+ * Author Name          : Swathi Poreddy
+ * Desc                 : To accept the experience and display their tag Color. 
+ * Version              : 1.0
+ * Date                 : 01-Nov-2018
+ *********************************************************************/
+BEGIN 
+     DECLARE expereince AS INTEGER
+     PROMPT expereince AND STORE IN expereince
+
+     IF (expereince>0  &&  expereince<3)
+        DISPLAY Your tag is BLUE
+
+     ELSEIF( expereince=3 ||  expereince<5)
+          DISPLAY Your tag is GREY
+
+     ELSEIF ( expereince=5 || expereince<10)
+          DISPALY Your tag is YELLOW
+
+     ELSE 
+         DISPLAY Your tag is RED
+ENDIF
+END

@@ -1,0 +1,78 @@
+*********************************************************************
+ * File                 : Lab1-1.6.txt
+ * Author Name          : Swathi Poreddy
+ * Description          : To accept 10 numbers an array
+ * Version              : 1.0
+ * Date                 : 02-Nov-2018
+ *********************************************************************/
+DECLARE arr[10], i AS INTEGER
+
+BEGIN 
+     PROMPT " Enter ten elements you need in the array:"
+
+FOR 
+    i EQUALS TO 0
+    CHECK CONDITION i LESSTHAN 10
+    INCREMENT i
+    PROMPT "Your elements:"+ i 
+    ACCEPT i VALUE AND STORE IN ADDRESS OF arr[i]
+ENDFOR
+
+DISPAY Your elements in the array are 
+
+FOR 
+    i EQUALS TO 0
+    CHECK CONDITION i LESSTHAN 10
+    INCREMENT i
+    DISPALY arr[i]
+ENDFOR
+
+smallestnumber(arr)
+evenorodd(arr)
+
+END
+/*********************************************************************
+* Module Name         : smallestnumber()
+* Input Parameters    : number
+* Return Type         : INTEGER
+* Author              : Swathi Poreddy
+* Creation Date       : 02-Nov-2018
+* Description         : To find the smallest numner in the array
+ *********************************************************************/
+SUB smallestnumber(arr)
+
+   Declare smallest as integer
+   Set smallestnumber to 0
+
+FOR EACH value in arr[] DO
+      IF arr[i] is less than smallestnumber THEN
+         smallestnumber IS EQUALS TO  arr[i]
+      ENDIF
+ENDFOR
+
+Display smallestnumber
+
+ENDSUB
+/*********************************************************************
+* Module Name         : evenorodd()
+* Input Parameters    : number
+* Return Type         : INTEGER
+* Author              : Swathi Poreddy
+* Creation Date       : 02-Nov-2018
+* Description         : To find even or odd number in the array
+ *********************************************************************/
+SUB evenorodd(arr)
+
+FOR 
+    i EQUALS TO 0
+    CHECK CONDITION i LESSTHAN 10
+    INCREMENT i
+
+IF  arr[i] / 2 IS EQUALS TO 0 
+    DISPALY Even number
+ELSE 
+    DISPLAY Odd number
+
+ENDFOR
+
+ENDSUB 

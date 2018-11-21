@@ -1,0 +1,39 @@
+*********************************************************************
+ * File                 : Lab1-1.5.txt
+ * Author Name          : Swathi Poreddy
+ * Desc                 : To convert a binary number to decimal.
+ * Version              : 1.0
+ * Date                 : 02-Nov-2018
+ *********************************************************************/
+DECLARE num, binarynumber, decimalnumber AS INTEGER
+BEGIN
+     ASSIGN decimalnumber TO 0
+     PROMPT "Enter binary number" AND STOREIN binarynumber
+     conversion(binarynumber)
+END
+/*********************************************************************
+* Module Name         : conversion()
+* Input Parameters    : binarynumber
+* Return Type         : INTEGER
+* Author              : Swathi Poreddy
+* Creation Date       : 02-Nov-2018
+* Description         : Conversion of binary number to decimalnumber
+ *********************************************************************/
+SUB conversion(binarynumber)
+    DECLARE res and base as INTEGER
+    ASSIGN binarynumber TO num
+    ASSIGN base TO 1
+
+WHILE num GREATERTHAN 0
+          res EQUALS TO num % 10
+          decimalnumber EQUALS TO decimalnumber + res * base
+          num EQUALS TO num / 10 
+          base = base * 2 
+ENDWHILE
+
+DISPLAY "Binary number is" + binarynumber
+DISPLAY " Its Equivalent decimal number is" + decimal number
+
+ENDSUB 
+     
+    

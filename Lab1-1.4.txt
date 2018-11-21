@@ -1,0 +1,40 @@
+/*********************************************************************
+ * File                 : Lab1-1.4.txt
+ * Author Name          : Swathi Poreddy
+ * Desc                 : To print the Armstrong number. 
+ * Version              : 1.0
+ * Date                 : 02-Nov-2018
+ *********************************************************************/
+DECLARE number as INTEGER
+BEGIN
+     PROMPT "Enter your three digit  number" AND STORE IN number
+     Armstrong(number)
+END
+/*********************************************************************
+* Module Name         : Armstrong()
+* Input Parameters    : Number
+* Return Type         : INTEGER
+* Author              : Swathi Poreddy
+* Creation Date       : 02-Nov-2018
+* Description         : Armstrong number
+ *********************************************************************/
+SUB Armstrong(number)
+    DECLARE originalnumber, remainder, result AS INTEGER
+    ASSIGN  number to originalnumber
+
+WHILE  originalnumber NOT EQUALS TO 0
+           remainder = originalnumber % 10
+           result += remainder * remainder * remainder
+           originalnumber /=10
+ENDWHILE
+
+IF result == number
+   PROMPT "Number is a Armstrong number" + number
+ELSE
+    PROMPT "Number is not a Armstrong number"
+ENDIF
+
+ENDSUB
+
+
+    

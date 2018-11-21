@@ -1,0 +1,36 @@
+*********************************************************************
+ * File                 : Lab2-2.2.txt
+ * Author Name          : Swathi Poreddy
+ * Description          : To accept a number and return the sum of its digits. 
+ * Version              : 1.0
+ * Date                 : 02-Nov-2018
+ *********************************************************************/
+DECLARE num, temp, digit, sum AS INTEGER
+BEGIN
+     PROMPT "Enter the number" AND STORE IN num
+     sum(num)
+END
+/*********************************************************************
+* Module Name         : sum()
+* Input Parameters    : number
+* Return Type         : INTEGER
+* Author              : Swathi Poreddy
+* Creation Date       : 02-Nov-2018
+* Description         : To accept a number and return the sum of its digits. 
+ *********************************************************************/
+SUB sum(num)
+    ASSIGN temp TO num
+
+WHILE num IS GREATER THAN 0
+           digit EQUALS TO num % 10
+           sum  EQUALS TO sum + digit
+           num /= 10
+ENDWHILE
+
+DISPALY "Your number is:" + temp
+DISPLAY "Sum of its digits is:" + sum  
+
+SUBEND
+
+
+    

@@ -1,0 +1,19 @@
+*********************************************************************
+ * File                 : Lab1-1.7.txt
+ * Author Name          : Swathi Poreddy
+ * Description          : To calculate total price of a product including tax.
+ * Version              : 1.0
+ * Date                 : 02-Nov-2018
+ *********************************************************************/
+DECLARE Taxrate AS CONSTANT 0.56
+DECLARE price, totalprice AS FLOAT
+
+BEGIN
+	Print "Enter price of your product" AND STORE IN price
+	totalprice = price * Taxrate
+	Print "Total price of product is": + totalprice
+END
+
+
+
+

@@ -1,0 +1,57 @@
+*********************************************************************
+ * File                 : Lab2-2.3.txt
+ * Author Name          : Swathi Poreddy
+ * Description          : To accept an array with 10 numbers and return number of unique values in an array
+ * Version              : 1.0
+ * Date                 : 02-Nov-2018
+ *********************************************************************/
+DECLARE arr[10], i, j, count, freq[] AS INTEGERS
+BEGIN
+     PROMPT "Enter the elements in the array"
+
+/******* To accept the elements from the user********/
+
+FOR ASSIGN i TO 0
+     CHECK CONDITION i<10
+     INCREMENT i
+     STORE VALUES IN arr[i]
+     ASSIGN freq[i]=-1
+ENDFOR
+
+/*********To find the unique elements in the array **********/
+ 
+FOR ASSIGN i TO 0
+    CHECK CONDITION i<10
+    INCREMENT i
+    ASSIGN count TO 1
+
+FOR ASSIGN j TO i+1
+    CHECK CONDITION j<10
+    INCREMENT j
+
+IF arr[i] IS EQUALS TO arr[j]
+   INCREMENT count
+   ASSIGN freq[i] TO 0
+ENDIF
+
+ENDFOR
+
+IF freq[i] NOTEQUALS TO 0
+   ASSIGN freq[i] TO count
+ENDFOR
+
+/********To display unique elements in the array *********/
+
+DISPLAY "Unique elements in the array are:"
+
+FOR ASSIGN i TO 0
+     CHECK CONDITION i<10
+     INCREMENT i
+
+IF freq[i] == 1
+   DISPLAY arr[i]
+ENDIF
+
+ENDFOR
+
+END

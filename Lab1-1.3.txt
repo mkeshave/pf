@@ -1,0 +1,35 @@
+/*********************************************************************
+ * File                 : Lab1-1.3.txt
+ * Author Name          : Swathi Poreddy
+ * Desc                 : To print the fibonacci series. 
+ * Version              : 1.0
+ * Date                 : 01-Nov-2018
+ *********************************************************************/
+DECLARE to N, num1, num2 AS INTEGER
+BEGIN 
+     PROMPT "Enter N value" AND STORE IN N
+     Fibonacci(N)    
+     
+END
+/*********************************************************************
+* Module Name         : Fibonaci()
+* Input Parameters    : Number
+* Return Type         : INTEGER
+* Author              : Swathi Poreddy
+* Creation Date       : 01-Nov-2018
+* Description         : Fibonacci Series
+ *********************************************************************/
+SUB Fibonacci(N)
+    DECLARE count,res as INTEGER
+    ASSIGN num1 EQUALS TO 0
+    ASSIGN num2 EQUALS TO 1
+    PRINT num1
+    FOR count=1 to N
+        res=num1 + num2
+        num1 = num2 
+        num1 = res 
+    PRINT RES
+END SUB 
+ 
+    
+   

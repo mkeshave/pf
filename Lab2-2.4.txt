@@ -1,0 +1,47 @@
+*********************************************************************
+ * File                 : Lab2-2.4.txt
+ * Author Name          : Swathi Poreddy
+ * Description          : For calculating total leaves applicable per year for an employee
+ * Version              : 1.0
+ * Date                 : 02-Nov-2018
+ *********************************************************************/
+RECORD Employee
+	DECLARE EmpId as INTEGER
+	DECLARE employmentType AS STRING
+ENDRECORD
+
+BEGIN
+       DECLARE emp AS Employee
+       DECLARE leaves, TotalLeaves AS INTEGER    //leaves variable is used to store number of leaves per month
+
+FOR index= 1 to 5
+                PROMPT "Enter the EmployeeId" AND STORE IN emp.EmpId
+                PROMPT "Enter the employmentType" AND STORE IN emp.employmentType
+ENDFOR
+calculation(employmentType)
+END
+/*********************************************************************
+* Module Name         : calculation()
+* Input Parameters    : employmentType
+* Return Type         : String
+* Author              : Swathi Poreddy
+* Creation Date       : 02-Nov-2018
+* Description         : To Calculate total leaves of a employee based on employment type
+ *********************************************************************/
+SUB calculation(employmentType)
+
+FOR index= 1 to 5
+                        IF(employmentType=='PERMANENT') THEN
+				leaves=2;
+				TotalLeaves=leaves*12;
+			ELSE 
+				leaves=1;
+				TotalLeaves=leaves*12;
+			ENDIF
+
+                        PRINT "Employee Id :" , emp.EmpId
+	                PRINT "Total Available Leaves are :", TotalLeaves
+ENDFOR
+
+ENDSUB
+

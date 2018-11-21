@@ -1,0 +1,49 @@
+/*********************************************************************
+ * File                 : Lab1-1.1.txt
+ * Author Name          : Swathi Poreddy
+ * Desc                 : Pseudo Code to print Electricity Bill
+ * Version              : 1.0
+ * Date                 : 01-Nov-2018
+ *********************************************************************/
+DECLARE Fixedcharge is always Rs.100
+DECLARE Netamount,Unitconsumed as FLOAT
+
+/*********************************************************************
+* Module Name         : details()
+* Input Parameters    : User ID, User Name
+* Return Type         : INTEGER, STRING
+* Author              : Swathi Poreddy
+* Creation Date       : 01-Nov-2018
+* Description         : Details from the User
+ *********************************************************************/
+
+SUB details(User ID, User Name)
+      PROMPT Enter User ID: AND STORE IN User ID
+      PROMPT Enter User Name: AND STORE IN User Name
+      RETURN User ID, User Name
+ENDSUB
+/*********************************************************************
+* Module Name         : reading()
+* Input Parameters    : Last month  meter reading , Current month meter reading
+* Return Type         : FLOAT
+* Author              : Swathi Poreddy
+* Creation Date       : 01-Nov-2018
+* Description         : Meter reading of the User
+ *********************************************************************/
+
+
+SUB reading(Last month  meter reading , Current month meter reading)
+      PROMPT Enter Last month  meter reading: AND STORE IN  Last month  meter reading
+      PROMPT Enter Current month meter reading:  AND STORE IN  Current month  meter reading
+      RETURN Last month  meter reading , Current month meter reading
+ENDSUB
+
+BEGIN
+     GET reading(Last month  meter reading , Current month meter reading)
+     CALCULATE Unitconsumed = (Last month meter reading) – (Current month meter reading)
+     CALCULATE Netamount = Unitconsumed * 1.15 +Fixedcharge
+     DISPLAY details(User ID, User Name)
+     DISPLAY Unitconsumed
+     DISPLAY  Netamount
+END
+    
